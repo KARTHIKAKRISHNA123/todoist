@@ -1,0 +1,16 @@
+# Spring Boot
+TodoBackend/target/
+TodoBackend/!mvn/wrapper/maven-wrapper.jar
+TodoBackend/log/
+*.class
+
+# React / Node.js
+node_modules/
+build/
+dist/
+.env
+
+# IDEs
+.idea/
+*.iml
+.vscode/
