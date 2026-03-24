@@ -1,7 +1,8 @@
 # Spring Boot
-TodoBackend/target/
-TodoBackend/!mvn/wrapper/maven-wrapper.jar
-TodoBackend/log/
+# Spring Boot
+HelloWorld/target/
+HelloWorld/log/
+!HelloWorld/.mvn/wrapper/maven-wrapper.jar
 *.class
 
 # React / Node.js
