@@ -5,7 +5,7 @@ A robust, decoupled Full-Stack Todo application built to demonstrate secure API 
 ## 🏗️ Architecture & Tech Stack
 
 **Frontend Interface:**
-* **React.js** (Bootstrapped with Vite)
+* **React.js** (Bootstrapped with Vite framework)
 * **HTML5 & Modern CSS**
 * **Fetch API** for asynchronous state management
 
