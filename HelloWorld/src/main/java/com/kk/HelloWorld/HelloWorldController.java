@@ -12,4 +12,6 @@ public class HelloWorldController {
     String sayHelloWorld() {
         return "Hello World!";
     }
+    //Representational State Transfer (REST)
 }
+
