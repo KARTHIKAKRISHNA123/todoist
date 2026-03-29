@@ -2,7 +2,7 @@
 
 A robust, decoupled Full-Stack Todo application built to demonstrate secure API development and modern frontend integration. This project features a Spring Boot RESTful API backend and a dynamic React.js frontend, utilizing JWT for secure, stateless authentication.
 
-## 🏗️ Architecture & Tech Stack
+## 🏗️ Software Architecture & Tech Stack
 
 **Frontend Interface:**
 * **React.js** (Bootstrapped with Vite framework)
