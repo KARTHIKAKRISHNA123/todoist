@@ -2,7 +2,10 @@ package com.kk.HelloWorld;
 
 import com.kk.HelloWorld.models.ToDo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 //Bean
 @Service
@@ -18,4 +21,10 @@ public class ToDoService {
         return toDoRepository.save(todo);
 
     }
+
+    public ToDo getToDoById(Long id) {
+        return toDoRepository.getReferenceById(id);
+    }
+
+
 }

@@ -36,6 +36,11 @@ public class ToDoController {
         return new ResponseEntity<>(toDoService.createToDo(todo), HttpStatus.CREATED);
     }
 
+    @GetMapping("/{id}")
+    ResponseEntity<ToDo>  getToDoById(@PathVariable Long id) {
+        return new ResponseEntity<>(toDoService.getToDoById(id), HttpStatus.OK);
+    }
+
     @PutMapping("/{id}")
     String updateToDoById(@PathVariable long id) {
         return "Update ToDo with Id " + id;
