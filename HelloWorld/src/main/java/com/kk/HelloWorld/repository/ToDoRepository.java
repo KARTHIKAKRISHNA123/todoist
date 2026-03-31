@@ -1,4 +1,4 @@
-package com.kk.HelloWorld;
+package com.kk.HelloWorld.repository;
 
 import com.kk.HelloWorld.models.ToDo;
 import org.springframework.data.jpa.repository.JpaRepository;

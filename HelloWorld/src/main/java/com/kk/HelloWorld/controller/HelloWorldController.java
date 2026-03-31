@@ -1,4 +1,4 @@
-package com.kk.HelloWorld;
+package com.kk.HelloWorld.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
