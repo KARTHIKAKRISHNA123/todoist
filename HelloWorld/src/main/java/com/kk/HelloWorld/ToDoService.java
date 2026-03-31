@@ -23,7 +23,7 @@ public class ToDoService {
     }
 
     public ToDo getToDoById(Long id) {
-        return toDoRepository.getReferenceById(id);
+        return toDoRepository.findById(id).orElseThrow(() -> new RuntimeException("To Do Not Found!"));
     }
 
 

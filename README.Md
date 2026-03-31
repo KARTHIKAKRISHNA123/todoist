@@ -10,7 +10,7 @@ A robust, decoupled Full-Stack Todo application built to demonstrate secure API 
 * **Fetch API** for asynchronous state management
 
 **Backend API:**
-* **Java 24**
+* **Java 21**
 * **Spring Boot 3.5.3**
 * **Spring Security** (Custom JWT Filter Chain)
 * **Spring Data JPA** (Hibernate ORM)

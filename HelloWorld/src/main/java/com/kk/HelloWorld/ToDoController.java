@@ -22,9 +22,15 @@ public class ToDoController {
 
     //Path Variable
     @GetMapping("/{id}")
-    String getToDoById(@PathVariable long id) {
-        return "ToDo with ID " + id;
-    }
+    ResponseEntity<ToDo> getToDoById(@PathVariable long id) {
+        try {
+            ToDo foundToDo = toDoService.getToDoById(id);
+            return new ResponseEntity<>(foundToDo, HttpStatus.OK);
+
+        }
+        catch (RuntimeException exception) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }    }
 
     @GetMapping("")
     String getToDoByIdParam(@RequestParam("toDoId") long id) {
@@ -33,13 +39,18 @@ public class ToDoController {
 
     @PostMapping("/create")
     ResponseEntity<ToDo> createUser(@RequestBody ToDo todo) {
-        return new ResponseEntity<>(toDoService.createToDo(todo), HttpStatus.CREATED);
+
+            ToDo createdToDo = toDoService.createToDo(todo);
+            return new ResponseEntity<>(createdToDo, HttpStatus.CREATED);
+
+
+
     }
 
-    @GetMapping("/{id}")
-    ResponseEntity<ToDo>  getToDoById(@PathVariable Long id) {
-        return new ResponseEntity<>(toDoService.getToDoById(id), HttpStatus.OK);
-    }
+//    @GetMapping("/{id}")
+//    ResponseEntity<ToDo>  getToDoById(@PathVariable Long id) {
+//        return new ResponseEntity<>(toDoService.getToDoById(id), HttpStatus.OK);
+//    }
 
     @PutMapping("/{id}")
     String updateToDoById(@PathVariable long id) {
