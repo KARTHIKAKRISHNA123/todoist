@@ -45,7 +45,8 @@ public class SecurityConfig {
         // Updated to include your production AppSail URL
         configuration.setAllowedOrigins(List.of(
                 "http://localhost:5173",
-                "https://springreacttodobykk-50040626068.development.catalystappsail.in"
+                "https://spring-react-to-do-5w1py6a7c-kk-af3453da.vercel.app"
+
         ));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("Authorization", "Content-Type"));

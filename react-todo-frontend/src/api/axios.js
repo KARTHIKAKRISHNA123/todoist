@@ -1,7 +1,13 @@
 import axios from 'axios';
 
+// CHANGE 1: We replaced the localhost fallback with your actual Zoho URL.
+// CHANGE 2: We added a console.log so we can see exactly what Vercel built.
+const API_URL = import.meta.env.VITE_API_BASE_URL || 'https://springreacttodobykk-50040626068.development.catalystappsail.in';
+
+console.log("React is officially routing traffic to:", API_URL);
+
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8081',
+    baseURL: API_URL,
 });
 
 // Interceptor: Automatically attach the JWT token to every request
