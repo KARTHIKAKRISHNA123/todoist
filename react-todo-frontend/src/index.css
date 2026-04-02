@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* 1. Define your custom Todoist Dark Mode theme colors here */
+@theme {
+  --color-background: #1f1f1f;
+  --color-foreground: #ffffff;
+  
+  --color-primary: #db4c3f;
+  --color-primary-foreground: #ffffff;
+  
+  --color-secondary: #383838;
+  --color-secondary-foreground: #a8a8a8;
+  
+  --color-muted: #2c2c2c;
+  --color-muted-foreground: #a8a8a8;
+  
+  --color-border: #363636;
+  --color-input: #363636;
+  --color-ring: #db4c3f;
+}
+
+/* 2. Set up the exact variable your Login/Register cards use */
+@layer base {
+  :root {
+    --sidebar-background: #282828;
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+}
+
+/* Custom Todoist Round Checkbox */
+@layer components {
+  .todoist-checkbox {
+    @apply w-5 h-5 rounded-full border-2 border-muted-foreground appearance-none cursor-pointer transition-colors duration-200 ease-in-out flex items-center justify-center;
+  }
+  .todoist-checkbox:checked {
+    @apply bg-muted-foreground border-muted-foreground;
+  }
+}
+
+@theme {
+  --color-background: #1f1f1f;
+  --color-foreground: #ffffff;
+  
+  --color-primary: #db4c3f;
+  --color-primary-foreground: #ffffff;
+  
+  /* Add these two lines! */
+  --color-card: #2c2c2c;
+  --color-card-foreground: #ffffff;
+  
+  --color-secondary: #383838;
+  --color-secondary-foreground: #a8a8a8;
+  
+  --color-muted: #2c2c2c;
+  --color-muted-foreground: #a8a8a8;
+  
+  --color-border: #363636;
+  --color-input: #363636;
+  --color-ring: #db4c3f;
+}
+
+@layer components {
+  .todoist-checkbox {
+    width: 18px; /* [cite: 316] */
+    height: 18px; /* [cite: 317] */
+    border-radius: 50%; /* Makes it a perfect circle [cite: 318] */
+    border: 1px solid #808080; /* [cite: 319] */
+    appearance: none; /* Hides the default square browser checkbox [cite: 320] */
+    cursor: pointer; /* [cite: 321] */
+    transition: background 0.2s, border-color 0.2s; /* [cite: 322] */
+  }
+  
+  .todoist-checkbox:checked {
+    background-color: #808080; /* [cite: 324] */
+    border-color: #808080; /* [cite: 325] */
+  }
+}

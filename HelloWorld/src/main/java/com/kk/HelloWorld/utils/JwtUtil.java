@@ -29,15 +29,20 @@ public class JwtUtil {
                 .compact();
     }
 
+    public String extractEmail(String token) {
+        return Jwts.parserBuilder()
+                .setSigningKey(secretKey)
+                .build()
+                // 4. Changed Jwt to Jws because your tokens are signed!
+                .parseClaimsJws(token)
+                .getBody()
+                .getSubject();
+
+    }
+
     public boolean validateJwtToken(String token) {
         try {
-            Jwts.parserBuilder()
-                    .setSigningKey(secretKey)
-                    .build()
-                    // 4. Changed Jwt to Jws because your tokens are signed!
-                    .parseClaimsJws(token)
-                    .getBody()
-                    .getSubject();
+            extractEmail(token);
             return true;
         }
         catch (JwtException exception) {
