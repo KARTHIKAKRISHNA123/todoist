@@ -1,17 +1,33 @@
-
-# Spring Boot
+# ==========================================
+# Spring Boot & Compiled Code
+# ==========================================
 HelloWorld/target/
 HelloWorld/log/
-!HelloWorld/.mvn/wrapper/maven-wrapper.jar
 *.class
 
+# Ignore ALL jar files globally so they never get uploaded...
+*.jar
+# ...EXCEPT the Maven wrapper, which other developers need to build the project
+!HelloWorld/.mvn/wrapper/maven-wrapper.jar
+
+# ==========================================
+# Zoho Catalyst Deployment
+# ==========================================
+# Explicitly block any JARs copied into the Deployment folder
+Deployment/*.jar
+
+# ==========================================
 # React / Node.js
+# ==========================================
 node_modules/
 build/
 dist/
 .env
 
-# IDEs
+# ==========================================
+# IDEs & OS Files
+# ==========================================
 .idea/
 *.iml
 .vscode/
+.DS_Store
