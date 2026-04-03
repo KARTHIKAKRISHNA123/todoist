@@ -1,33 +1,93 @@
 # ==========================================
-# Spring Boot & Compiled Code
+# Spring Boot & Java (Backend)
 # ==========================================
-HelloWorld/target/
-HelloWorld/log/
+# Compiled class files
 *.class
 
-# Ignore ALL jar files globally so they never get uploaded...
+# Log files
+*.log
+HelloWorld/log/
+
+# Package Files (Must ignore these to keep repo light)
 *.jar
-# ...EXCEPT the Maven wrapper, which other developers need to build the project
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# EXCEPTIONS: Keep the Maven wrapper so others can build your project
 !HelloWorld/.mvn/wrapper/maven-wrapper.jar
 
-# ==========================================
-# Zoho Catalyst Deployment
-# ==========================================
-# Explicitly block any JARs copied into the Deployment folder
-Deployment/*.jar
+# Build folders
+HelloWorld/target/
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
 
 # ==========================================
-# React / Node.js
+# React / Node.js (Frontend)
 # ==========================================
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Production build folders
 build/
 dist/
+
+# Local environment variables (IMPORTANT: Never push secrets!)
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # ==========================================
-# IDEs & OS Files
+# Zoho Catalyst & Deployment
 # ==========================================
+# Explicitly ensuring no jars from the deployment folder get uploaded
+Deployment/*.jar
+.catalyst/
+
+# ==========================================
+# IDEs & System Files
+# ==========================================
+# IntelliJ IDEA
 .idea/
+*.iws
 *.iml
+*.ipr
+
+# VS Code
 .vscode/
+
+# Eclipse / STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# OS Specific
 .DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Miscellaneous
+HELP.md
