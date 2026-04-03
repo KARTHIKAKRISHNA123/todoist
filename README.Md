@@ -1,4 +1,4 @@
-# 🚀 Spring Boot + React — Full-Stack Todo Application
+# Spring Boot + React — Full-Stack Todo Application
 
 
 > Built by **Karthika Krishna M** as a hands-on deep dive into Spring Boot, REST APIs, JWT Security, Cloud Deployment, and DevOps — from zero knowledge to production.
@@ -15,7 +15,7 @@
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 1. [Project Overview](#1-project-overview)
 2. [Live Architecture](#2-live-architecture)
