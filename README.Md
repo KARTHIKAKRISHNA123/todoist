@@ -1,6 +1,6 @@
 # 🚀 Spring Boot + React — Full-Stack Todo Application
 
-> **From a local project in Tenkasi to a live, globally deployed distributed system.**
+
 > Built by **Karthika Krishna M** as a hands-on deep dive into Spring Boot, REST APIs, JWT Security, Cloud Deployment, and DevOps — from zero knowledge to production.
 
 ---
@@ -490,67 +490,137 @@ Getting the H2 console working was one of the first major debugging challenges:
 
 ---
 
-## 8. Security — JWT & Spring Security
+# JWT Authentication & Authorization Flow
 
-### JWT Token Flow
+This document explains how **JSON Web Token (JWT)** authentication works in the system.
+It covers:
+
+* The **login process** where a token is generated
+* The **authorization flow** for protected requests
+* The **internal structure of a JWT token**
+
+---
+
+# 1. JWT Token Flow (Authentication)
+
+This sequence diagram shows how a client logs in and receives a JWT token from the server.
+
+```mermaid
+sequenceDiagram
+    participant User as Client (Browser/Postman)
+    participant API as Spring Boot Server
+    participant Filter as JwtFilter / Security
+    participant DB as Supabase (PostgreSQL)
+
+    User->>API: POST /auth/login (email, password)
+    API->>Filter: Intercept Request
+    Filter->>DB: Find User by Email
+    DB-->>Filter: Return User Object (Hashed Password)
+    Filter->>Filter: BCrypt.matches(password, hashedPass)
+    Note right of Filter: If valid → Generate JWT (HS256)
+    Filter-->>API: Return Token String
+    API-->>User: 200 OK { "token": "eyJhbG..." }
+```
+
+---
+
+# 2. Every Subsequent Request (Authorization)
+
+After authentication, the client must include the **JWT token in the Authorization header** for protected API requests.
 
 ```mermaid
 flowchart LR
-    A[User / Client]
-    B[Postman / Browser]
-    C[Spring Boot API Server]
-    D[JwtFilter\nSecurity Layer]
-    E[(Database)]
+    A[Client] -- "Header: Bearer eyJ..." --> B[JwtFilter]
+    B --> C{Token Valid?}
+    C -- "No" --> D[401 Unauthorized]
+    C -- "Yes" --> E[Extract Email]
+    E --> F[SecurityContextHolder]
+    F --> G[Controller / Service]
+    G --> H[200 OK Data]
 
-    A --> B
-    B -->|POST /auth/login\nemail + password| C
-    C --> D
-    D -->|Validate credentials\nBCrypt.matches| E
-    E --> D
-    D -->|Generate JWT HS256| C
-    C -->|200 OK\n{token: eyJhbG...}| B
-    B --> A
+    style D fill:#f96,stroke:#333
+    style H fill:#9f9,stroke:#333
 ```
 
-### Every Subsequent Request
+---
 
-```mermaid
-flowchart LR
-    A[Client]
-    B[Request\nAuthorization: Bearer eyJhbG...]
-    C[JwtFilter\nOncePerRequestFilter]
-    D{Token Valid?}
-    E[SecurityContextHolder\nSet Authentication]
-    F[Controller\nProcess Request]
-    G[401 Unauthorized]
+# 3. JWT Structure (The 3 Parts)
 
-    A --> B
-    B --> C
-    C --> D
-    D -->|Yes| E
-    E --> F
-    D -->|No| G
+A JWT token is composed of **three parts** separated by dots:
+
+```
+Header.Payload.Signature
 ```
 
-### JWT Structure
+The following diagram explains the structure.
 
 ```mermaid
 flowchart TD
-    A[JWT Token\neyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...]
-    A --> B[Header]
-    A --> C[Payload]
-    A --> D[Signature]
-    B --> B1[Algorithm: HS256 / HMAC]
-    B --> B2[Type: JWT]
-    C --> C1[Subject: user@email.com]
-    C --> C2[IssuedAt: timestamp]
-    C --> C3[Expiration: 24 hours]
-    B --> E[Base64 URL Encode]
-    C --> E
-    E --> F[Signature Generation]
-    F --> G[Algorithm: HS256]
-    F --> H[Secret Key: 32+ chars]
+    Token[JWT Token]
+
+    Token --> Part1[Header]
+    Token --> Part2[Payload]
+    Token --> Part3[Signature]
+
+    subgraph Header_Details
+    Part1 --> H1[Algorithm: HS256]
+    Part1 --> H2[Type: JWT]
+    end
+
+    subgraph Payload_Details
+    Part2 --> P1[sub: user@email.com]
+    Part2 --> P2[iat: Issued At]
+    Part2 --> P3[exp: Expiration]
+    end
+
+    subgraph Signature_Logic
+    Part1 & Part2 --> Encode[Base64URL Encode]
+    Encode --> Hash[HMACSHA256 with Secret Key]
+    Hash --> Part3
+    end
+
+    style Token fill:#d4f,stroke:#333
 ```
+
+---
+
+# Key Takeaways
+
+### Authentication
+
+* Client sends **email and password**
+* Server validates credentials
+* JWT token is generated and returned
+
+### Authorization
+
+* Client sends the token in the **Authorization header**
+* `JwtFilter` validates the token
+* If valid → request reaches controller
+* If invalid → **401 Unauthorized**
+
+### JWT Components
+
+| Component | Purpose                                        |
+| --------- | ---------------------------------------------- |
+| Header    | Contains algorithm and token type              |
+| Payload   | Contains claims like user email and timestamps |
+| Signature | Ensures the token has not been tampered with   |
+
+---
+
+# Notes
+
+* JWT tokens are **stateless**, meaning the server does not store session data.
+* Each request must include the token in the header:
+
+```
+Authorization: Bearer <JWT_TOKEN>
+```
+
+* Token validation is handled by **JwtFilter / Spring Security layer** before reaching controllers.
+
+---
 
 ### Security Concepts Reference
 
