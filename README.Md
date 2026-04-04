@@ -776,9 +776,9 @@ const API_URL = import.meta.env.VITE_API_BASE_URL
 
 ---
 
-## 10. The CORS Battle — 24 Hours of Debugging
+## 10. The CORS Battle
 
-This was the final boss. The journey from "CORS error" to "live and working" involved multiple layers:
+The journey from "CORS error" to "live and working" involved multiple layers:
 
 ```mermaid
 flowchart TD
