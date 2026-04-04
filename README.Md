@@ -1,21 +1,47 @@
-# Spring Boot + React — Full-Stack Todo Application
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=DB4C3F&center=true&vCenter=true&width=700&lines=Spring+Boot+%2B+React+Todo+App;Full-Stack+%7C+JWT+%7C+Cloud+Deployed;From+Tenkasi+to+Production+%F0%9F%9A%80" alt="Typing SVG" />
+</p>
 
+<p align="center">
+  <a href="https://spring-react-to-do-gl2cyoppe-kk-af3453da.vercel.app">
+    <img src="https://img.shields.io/badge/Frontend-Live%20on%20Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Frontend Live" />
+  </a>
+  <a href="https://springreacttodobykk-50040626068.development.catalystappsail.in">
+    <img src="https://img.shields.io/badge/Backend-Live%20on%20Zoho-E42527?style=for-the-badge&logo=zoho&logoColor=white" alt="Backend Live" />
+  </a>
+  <a href="https://github.com/KARTHIKAKRISHNA123/Spring-React-ToDo-NM">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
+</p>
 
-> Built by **Karthika Krishna M** as a hands-on deep dive into Spring Boot, REST APIs, JWT Security, Cloud Deployment, and DevOps — from zero knowledge to production.
+<p align="center">
+  <img src="https://img.shields.io/badge/Spring%20Boot-3.4.4-6DB33F?style=flat-square&logo=springboot&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-17-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-Supabase-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/JWT-Auth-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" />
+</p>
+
+---
+
+> **Built by Karthika Krishna M** — A hands-on deep dive into Spring Boot, REST APIs, JWT Security, Cloud Deployment, and DevOps — from zero knowledge to production. From a local project in Alangulam, Tenkasi, Tamil Nadu to a live, globally deployed distributed system.
 
 ---
 
 ## 🌐 Live Deployment
 
-| Service | URL |
-|---|---|
-| **Frontend (Vercel)** | https://spring-react-to-do-gl2cyoppe-kk-af3453da.vercel.app |
-| **Backend (Zoho Catalyst AppSail)** | https://springreacttodobykk-50040626068.development.catalystappsail.in |
-| **Database** | Supabase PostgreSQL — Mumbai Region (ap-south-1) |
+| Service | Platform | URL |
+|---|---|---|
+| **Frontend** | ![Vercel](https://img.shields.io/badge/Vercel-000?logo=vercel&logoColor=white) | https://spring-react-to-do-gl2cyoppe-kk-af3453da.vercel.app |
+| **Backend** | ![Zoho](https://img.shields.io/badge/Zoho-E42527?logo=zoho&logoColor=white) | https://springreacttodobykk-50040626068.development.catalystappsail.in |
+| **Database** | ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white) | PostgreSQL — Mumbai Region (ap-south-1) |
 
 ---
 
-##  Table of Contents
+## 📋 Table of Contents
 
 1. [Project Overview](#1-project-overview)
 2. [Live Architecture](#2-live-architecture)
@@ -31,6 +57,7 @@
 12. [Known Issues & Fixes](#12-known-issues--fixes)
 13. [Local Development Setup](#13-local-development-setup)
 14. [Architectural Diagrams](#14-architectural-diagrams)
+15. [Project Status](#15-project-status)
 
 ---
 
@@ -62,8 +89,6 @@ flowchart LR
     B -->|JSON Response| A
 ```
 
-### How the Three Services Talk
-
 ```mermaid
 flowchart TD
     A[Vercel\nReact Frontend\nTailwind + Framer Motion]
@@ -84,46 +109,72 @@ flowchart TD
 
 ### 3.1 Backend
 
+<p align="left">
+  <img src="https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring%20Boot-3.4.4-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring%20Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring%20Data%20JPA-6DB33F?style=for-the-badge&logo=spring&logoColor=white" />
+  <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white" />
+  <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" />
+  <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" />
+  <img src="https://img.shields.io/badge/Lombok-BC4521?style=for-the-badge&logo=lombok&logoColor=white" />
+</p>
+
 | Package | Full Form | Why We Use It |
 |---|---|---|
-| `spring-boot-starter-web` | Spring Web MVC Starter | Provides REST API support via `@RestController`. Includes embedded Apache Tomcat server. |
-| `spring-boot-starter-data-jpa` | Spring Data JPA Starter | JPA = Java Persistence API. ORM via Hibernate. Write Java objects instead of SQL. |
-| `spring-boot-starter-security` | Spring Security Starter | JWT filter chain, CORS configuration, BCrypt password hashing, route protection. |
-| `spring-boot-starter-validation` | Bean Validation Starter | `@NotBlank`, `@NotNull`, `@Email` annotations on entity fields. |
-| `postgresql` | PostgreSQL JDBC Driver | Allows Spring Boot to connect to PostgreSQL via JDBC. |
-| `jjwt-api / jjwt-impl / jjwt-jackson` | Java JWT Library (JJWT) | Generates, signs, and validates JWT tokens using HMAC-SHA256 (HS256). |
-| `lombok` | Project Lombok | `@Data`, `@Builder`, `@NoArgsConstructor`, `@AllArgsConstructor` — eliminates boilerplate. |
-| `spring-boot-starter-test` | Spring Test Starter | JUnit + Mockito for unit and integration tests. |
+| ![Spring](https://img.shields.io/badge/-spring--boot--starter--web-6DB33F?logo=springboot&logoColor=white) | Spring Web MVC Starter | REST API support via `@RestController`. Includes embedded Apache Tomcat. |
+| ![Spring](https://img.shields.io/badge/-spring--boot--starter--data--jpa-6DB33F?logo=spring&logoColor=white) | Spring Data JPA Starter | JPA = Java Persistence API. ORM via Hibernate. Write Java objects instead of SQL. |
+| ![Spring](https://img.shields.io/badge/-spring--boot--starter--security-6DB33F?logo=springsecurity&logoColor=white) | Spring Security Starter | JWT filter chain, CORS, BCrypt hashing, route protection. |
+| ![Spring](https://img.shields.io/badge/-spring--boot--starter--validation-6DB33F?logo=spring&logoColor=white) | Bean Validation Starter | `@NotBlank`, `@NotNull`, `@Email` on entity fields. |
+| ![PostgreSQL](https://img.shields.io/badge/-postgresql-4169E1?logo=postgresql&logoColor=white) | PostgreSQL JDBC Driver | Connects Spring Boot to PostgreSQL via JDBC. |
+| ![JWT](https://img.shields.io/badge/-jjwt--api%20%2F%20impl%20%2F%20jackson-000000?logo=jsonwebtokens&logoColor=white) | Java JWT Library (JJWT) | Generates, signs, validates JWT tokens using HS256. |
+| ![Lombok](https://img.shields.io/badge/-lombok-BC4521?logo=lombok&logoColor=white) | Project Lombok | `@Data`, `@Builder`, `@NoArgsConstructor` — eliminates boilerplate. |
 
 ### 3.2 Frontend
 
+<p align="left">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Framer%20Motion-12-0055FF?style=for-the-badge&logo=framer&logoColor=white" />
+  <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white" />
+  <img src="https://img.shields.io/badge/TanStack%20Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white" />
+  <img src="https://img.shields.io/badge/React%20Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white" />
+  <img src="https://img.shields.io/badge/React%20Hook%20Form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white" />
+</p>
+
 | Package | Full Form | Why We Use It |
 |---|---|---|
-| `React 19` | React JavaScript Library | Component-based UI library. Entire frontend is isolated, reusable components. |
-| `Vite 8` | Vite Build Tool | Lightning-fast dev server with HMR. Much faster than Create React App. |
-| `Tailwind CSS 4` | Tailwind CSS Framework | Utility-first — styles are class names inside JSX. No separate CSS files. |
-| `@tailwindcss/vite` | Tailwind Vite Plugin | Integrates Tailwind into Vite's build pipeline. Must be in plugins array in `vite.config.js`. |
-| `@vitejs/plugin-react` | Vite React Plugin | Enables JSX transformation and React Fast Refresh. |
-| `react-router-dom 7` | React Router DOM | Client-side routing between `/login`, `/register`, `/dashboard` without page reloads. |
-| `axios` | Axios HTTP Client | HTTP client with interceptors. Auto-attaches JWT token to every request. |
-| `@tanstack/react-query 5` | TanStack Query | Server state management. Handles fetching, caching, loading states. Replaces `useEffect` for API calls. |
-| `react-hook-form 7` | React Hook Form | Form validation without re-rendering on every keystroke. |
-| `framer-motion 12` | Framer Motion | 3D card tilts, staggered entrance animations, spring physics, hover/tap effects. |
-| `lucide-react` | Lucide React Icons | SVG icon library — Trash2, Edit2, LogOut, Plus, Check, RotateCcw icons. |
-| `react-hot-toast` | React Hot Toast | Toast notifications for success/error feedback on login, register, CRUD. |
-| `clsx + tailwind-merge` | Class Utility Helpers | Merge conditional Tailwind classes without conflicts. |
-| `next-themes` | Next Themes | Dark/light mode theme state management. |
+| ![React](https://img.shields.io/badge/-React%2019-61DAFB?logo=react&logoColor=black) | React JavaScript Library | Component-based UI. Entire frontend is isolated, reusable components. |
+| ![Vite](https://img.shields.io/badge/-Vite%208-646CFF?logo=vite&logoColor=white) | Vite Build Tool | Lightning-fast dev server with HMR. Much faster than Create React App. |
+| ![Tailwind](https://img.shields.io/badge/-Tailwind%20CSS%204-06B6D4?logo=tailwindcss&logoColor=white) | Tailwind CSS Framework | Utility-first — styles are class names inside JSX. No separate CSS files. |
+| ![Framer](https://img.shields.io/badge/-Framer%20Motion%2012-0055FF?logo=framer&logoColor=white) | Framer Motion | 3D card tilts, staggered entrance animations, spring physics. |
+| ![Axios](https://img.shields.io/badge/-Axios-5A29E4?logo=axios&logoColor=white) | Axios HTTP Client | Interceptors auto-attach JWT token to every request. |
+| ![TanStack](https://img.shields.io/badge/-TanStack%20Query%205-FF4154?logo=reactquery&logoColor=white) | TanStack Query | Server state management. Replaces `useEffect` for API calls. |
+| ![Router](https://img.shields.io/badge/-React%20Router%207-CA4245?logo=reactrouter&logoColor=white) | React Router DOM | Client-side routing between pages without reloads. |
+| ![HookForm](https://img.shields.io/badge/-React%20Hook%20Form%207-EC5990?logo=reacthookform&logoColor=white) | React Hook Form | Form validation without re-rendering on every keystroke. |
+| ![Lucide](https://img.shields.io/badge/-Lucide%20React-F56040?logo=lucide&logoColor=white) | Lucide React Icons | SVG icons — Trash2, Edit2, LogOut, Plus, Check, RotateCcw. |
+| ![Toast](https://img.shields.io/badge/-react--hot--toast-FF6154?logo=react&logoColor=white) | React Hot Toast | Toast notifications for login, register, CRUD feedback. |
 
 ### 3.3 DevOps & Infrastructure
 
+<p align="left">
+  <img src="https://img.shields.io/badge/Zoho%20Catalyst-E42527?style=for-the-badge&logo=zoho&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white" />
+</p>
+
 | Tool | Full Form | Purpose |
 |---|---|---|
-| Maven / `mvnw` | Apache Maven Wrapper | Java build tool. Compiles code, resolves dependencies, packages JAR. |
-| Zoho Catalyst AppSail | Zoho Cloud Platform | Backend hosting. Assigns dynamic ports. 10-second startup window. |
-| Vercel | Vercel Deployment Platform | Frontend hosting. Reads from GitHub. Auto-deploys on push. |
-| Supabase | Supabase Cloud Database | Managed PostgreSQL. Mumbai region. Transaction pooler on port 6543. |
-| HikariCP | HikariCP Connection Pool | Spring Boot's default JDBC connection pool. Manages Supabase connections. |
-| Catalyst CLI | Zoho Catalyst Command Line Interface | `catalyst login`, `catalyst deploy` — pushes JAR to Zoho cloud. |
+| ![Maven](https://img.shields.io/badge/-Maven-C71A36?logo=apachemaven&logoColor=white) | Apache Maven Wrapper | Java build tool. Compiles, resolves dependencies, packages JAR. |
+| ![Zoho](https://img.shields.io/badge/-Zoho%20Catalyst%20AppSail-E42527?logo=zoho&logoColor=white) | Zoho Cloud Platform | Backend hosting. Dynamic ports. 10-second startup window. |
+| ![Vercel](https://img.shields.io/badge/-Vercel-000000?logo=vercel&logoColor=white) | Vercel Deployment Platform | Frontend hosting. Auto-deploys on GitHub push. |
+| ![Supabase](https://img.shields.io/badge/-Supabase-3ECF8E?logo=supabase&logoColor=white) | Supabase Cloud Database | Managed PostgreSQL. Mumbai region. Transaction pooler port 6543. |
+| ![HikariCP](https://img.shields.io/badge/-HikariCP-336791?logo=postgresql&logoColor=white) | HikariCP Connection Pool | Spring Boot's default JDBC pool. Manages Supabase connections. |
 
 ---
 
@@ -192,29 +243,25 @@ flowchart TD
     B --> A
 ```
 
-**Key Rule**: Layers never skip each other. Controller talks to Service only. Service talks to Repository only. Repository talks to the Database only.
+**Key Rule**: Layers never skip each other. Controller → Service → Repository → Database. Always.
 
 ### 4.3 Spring Core Concepts Applied
 
-**Dependency Injection (DI):**
+**Dependency Injection:**
 ```java
 @Service
 public class ToDoService {
     @Autowired
-    private ToDoRepository toDoRepository; // Spring injects this — not new ToDoRepository()
+    private ToDoRepository toDoRepository; // Spring injects — not new ToDoRepository()
 }
 ```
 
-**Inversion of Control (IoC):** Spring's ApplicationContext creates and manages all Beans. We declare what we need, Spring provides it.
-
-**Bean:** Any Java object managed by Spring's IoC container. Created by `@Component`, `@Service`, `@Repository`, `@Controller`, `@Configuration`.
-
-**Open/Closed Principle Applied:**
+**Open/Closed Principle:**
 - Switching REST → GraphQL? Only change the Controller layer.
 - Switching PostgreSQL → MongoDB? Only change the Repository layer.
 - Switching JWT → OAuth? Only change SecurityConfig + JwtFilter.
 
-### 4.4 Maven — The Build Tool
+### 4.4 Maven Build Tool
 
 ```mermaid
 flowchart LR
@@ -249,7 +296,7 @@ flowchart TD
     A --> F[DELETE\nRemove Resource]
 ```
 
-> Before REST there was **SOAP** — Simple Object Access Protocol — complex XML-based. REST uses simple URLs + HTTP methods and is the modern standard.
+> Before REST there was **SOAP** (Simple Object Access Protocol) — complex XML-based. REST uses simple URLs + HTTP methods.
 
 ### 4.6 Spring Data JPA — ORM Layer
 
@@ -271,8 +318,6 @@ flowchart TD
     B --> A
 ```
 
-JPA annotation reference:
-
 | Annotation | Purpose |
 |---|---|
 | `@Entity` | Maps Java class to a database table |
@@ -280,41 +325,25 @@ JPA annotation reference:
 | `@Id` | Marks the primary key |
 | `@GeneratedValue` | Auto-increments ID on insert |
 | `@NotBlank` | Field cannot be null, empty, or whitespace |
-| `@NotNull` | Field cannot be null (for non-String types like Boolean) |
-| `@Email` | Validates valid email format |
-
-`JpaRepository` provides these methods for free — no SQL needed:
-
-```java
-toDoRepository.save(todo)          // INSERT / UPDATE
-toDoRepository.findById(1L)        // SELECT WHERE id=1
-toDoRepository.findAll()           // SELECT *
-toDoRepository.deleteById(1L)      // DELETE WHERE id=1
-toDoRepository.findByEmail(email)  // Custom derived query
-```
+| `@NotNull` | Field cannot be null (for Boolean types) |
+| `@Email` | Validates email format |
 
 ### 4.7 Dynamic Port — ServerPortCustomizer
 
-Zoho Catalyst assigns a random port to the app on every startup via an environment variable. This class reads it:
+Zoho Catalyst assigns a random port on every startup via environment variable:
 
 ```java
 @Configuration
 public class ServerPortCustomizer
     implements WebServerFactoryCustomizer<ConfigurableServletWebServerFactory> {
-
     @Override
     public void customize(ConfigurableServletWebServerFactory factory) {
         String port = System.getenv("X_ZOHO_CATALYST_LISTEN_PORT");
-        if (port != null) {
-            factory.setPort(Integer.parseInt(port));
-        } else {
-            factory.setPort(8081); // local fallback
-        }
+        if (port != null) factory.setPort(Integer.parseInt(port));
+        else factory.setPort(8081); // local fallback
     }
 }
 ```
-
-Without this, the app would try to bind to port 8081 on Zoho's server — but that port is not assigned to it, causing an immediate startup crash.
 
 ---
 
@@ -341,7 +370,7 @@ react-todo-frontend/
     │   ├── layout/
     │   │   ├── AppLayout.jsx     Flex container — Sidebar + Main content
     │   │   ├── Header.jsx        Todoist logo + red Logout button
-    │   │   └── Sidebar.jsx       Left nav with Inbox, Today links
+    │   │   └── Sidebar.jsx       Left nav — Inbox, Today links
     │   └── todos/
     │       ├── TaskList.jsx      Bento grid — maps todos → TaskItem cards
     │       └── TaskItem.jsx      Google Labs 3D card — tilt, hover, edit, delete
@@ -370,15 +399,8 @@ flowchart LR
     I[ToDoRepository\n.save]
     J[(Supabase\nPostgreSQL)]
 
-    A --> B
-    B --> C
-    C --> D
-    D -->|HTTPS| E
-    E --> F
-    F --> G
-    G --> H
-    H --> I
-    I --> J
+    A --> B --> C --> D -->|HTTPS| E
+    E --> F --> G --> H --> I --> J
     J -->|saved entity| I
     I -->|201 Created| G
     G -->|JSON response| E
@@ -389,23 +411,21 @@ flowchart LR
 
 ### 5.3 Tailwind Dark Mode Theme
 
-All custom colors are defined in `index.css` using `@theme`:
-
-| Variable | Hex | Used For |
-|---|---|---|
-| `--color-background` | `#1f1f1f` | Main dark page background |
-| `--color-foreground` | `#ffffff` | Primary text color |
-| `--color-primary` | `#db4c3f` | Todoist signature red — buttons, highlights |
-| `--color-secondary` | `#383838` | Secondary UI elements |
-| `--color-muted` | `#2c2c2c` | Muted backgrounds |
-| `--color-muted-foreground` | `#a8a8a8` | Secondary text, placeholders |
-| `--color-border` | `#363636` | All borders |
-| `--color-card` | `#2c2c2c` | Task card backgrounds |
-| `--sidebar-background` | `#282828` | Sidebar + login card |
+```css
+@theme {
+  --color-background: #1f1f1f;
+  --color-foreground: #ffffff;
+  --color-primary: #db4c3f;        /* Todoist signature red */
+  --color-secondary: #383838;
+  --color-muted: #2c2c2c;
+  --color-muted-foreground: #a8a8a8;
+  --color-border: #363636;
+  --color-card: #2c2c2c;
+  --sidebar-background: #282828;
+}
+```
 
 ### 5.4 Framer Motion Animations
-
-The `TaskItem.jsx` implements Google Labs-inspired bento grid cards with:
 
 ```mermaid
 flowchart TD
@@ -413,12 +433,10 @@ flowchart TD
     A --> B[Staggered Waterfall Entrance\nstaggerChildren: 0.1s delay]
     A --> C[3D Tilt on Hover\nuseMotionValue x/y\nrotateX / rotateY via useTransform]
     A --> D[Magnetic Focus\nhovered card: scale 1.03, y -12\nothers: opacity 0.3, pointer-events none]
-    A --> E[Spring Slide-in\nstiffness 400 damping 30\nfrom y:40 scale:0.8]
-    A --> F[Exit Animation\nopacity 0 scale 0.5\nduration 0.15s]
+    A --> E[Spring Slide-in\nstiffness 400 damping 30]
+    A --> F[Exit Animation\nopacity 0 scale 0.5]
     A --> G[Tap Feedback\nwhileTap scale 0.96]
 ```
-
-**Inline Edit Feature:** Clicking EDIT transforms the card title into an `<input>` with `autoFocus`. Pressing Enter or clicking SAVE sends a `PUT` request via `updateTodo`. Pressing CANCEL restores the original title without an API call.
 
 ---
 
@@ -428,17 +446,15 @@ All protected endpoints require `Authorization: Bearer <token>` header.
 
 | Method | Endpoint | Auth | Description | Response |
 |---|---|---|---|---|
-| `GET` | `/` | No | Health check for Zoho | `200 Backend is Live!` |
+| `GET` | `/` | No | Zoho health check | `200 Backend is Live!` |
 | `POST` | `/auth/register` | No | Register new user | `201 Created` / `409 Conflict` |
-| `POST` | `/auth/login` | No | Login, returns JWT | `200 {token: "..."}` |
-| `GET` | `/api/v1/toDo` | Yes | Get all todos | `200 List<ToDo>` |
-| `GET` | `/api/v1/toDo/{id}` | Yes | Get specific todo | `200 ToDo` / `404` |
-| `GET` | `/api/v1/toDo/page?page=0&size=5` | Yes | Paginated todos | `200 Page<ToDo>` |
-| `POST` | `/api/v1/toDo/create` | Yes | Create new todo | `201 ToDo` |
-| `PUT` | `/api/v1/toDo` | Yes | Update todo | `200 ToDo` |
-| `DELETE` | `/api/v1/toDo/{id}` | Yes | Delete todo | `200 String` |
-| `GET` | `/hello` | No* | Test endpoint | `200 Hello World!` |
-| `GET` | `/kk` | No* | Test endpoint | `200 Hello KK!` |
+| `POST` | `/auth/login` | No | Login — returns JWT | `200 {token: "..."}` |
+| `GET` | `/api/v1/toDo` | ✅ Yes | Get all todos | `200 List<ToDo>` |
+| `GET` | `/api/v1/toDo/{id}` | ✅ Yes | Get specific todo | `200 ToDo` / `404` |
+| `GET` | `/api/v1/toDo/page?page=0&size=5` | ✅ Yes | Paginated todos | `200 Page<ToDo>` |
+| `POST` | `/api/v1/toDo/create` | ✅ Yes | Create new todo | `201 ToDo` |
+| `PUT` | `/api/v1/toDo` | ✅ Yes | Update todo | `200 ToDo` |
+| `DELETE` | `/api/v1/toDo/{id}` | ✅ Yes | Delete todo | `200 String` |
 
 **ToDo entity schema:**
 ```json
@@ -461,53 +477,33 @@ flowchart LR
     D[Production Phase]
     E[Supabase Cloud PostgreSQL\nMumbai Region ap-south-1\nPooler Port 6543\nSSL Required]
 
-    A --> B
-    B --> C
-    C --> D
-    D --> E
+    A --> B --> C --> D --> E
 ```
 
-Switching between databases requires only 3 lines in `application.properties`. All `@Entity` classes and JPA repositories stay exactly the same — this is the power of JPA abstraction.
+Switching between databases = **3 lines in `application.properties`**. All `@Entity` classes stay the same. This is JPA abstraction.
 
-### Supabase Connection Configuration
+### Supabase Connection
 
 ```properties
 spring.datasource.url=jdbc:postgresql://aws-1-ap-south-1.pooler.supabase.com:6543/postgres?sslmode=require&prepareThreshold=0
 ```
 
-- **Port 6543** — Transaction Pooler (not direct port 5432). Required for cloud-to-cloud networking.
-- **`sslmode=require`** — Mandatory for Supabase connections.
-- **`prepareThreshold=0`** — Disables prepared statements for pooler compatibility in Transaction Mode.
-- **Mumbai region** — Closest to Zoho Catalyst's Chennai data center, minimizing latency.
-
-### H2 Console — The Development Journey
-
-Getting the H2 console working was one of the first major debugging challenges:
-
-- **Root cause:** Spring Boot **4.0.4** broke H2 console auto-registration in `DispatcherServlet`
-- **Fix:** Downgraded to Spring Boot **3.4.4** + `Build → Clean Project` in IntelliJ
-- **Key lesson:** Always clean the `target/` folder after changing Spring Boot versions. Old compiled `.class` files override new configuration.
+| Parameter | Reason |
+|---|---|
+| **Port 6543** | Transaction Pooler — required for cloud-to-cloud |
+| **`sslmode=require`** | Mandatory for Supabase |
+| **`prepareThreshold=0`** | Disables prepared statements for pooler compatibility |
+| **Mumbai region** | Closest to Zoho Catalyst Chennai — minimum latency |
 
 ---
 
-# JWT Authentication & Authorization Flow
+## 8. Security — JWT & Spring Security
 
-This document explains how **JSON Web Token (JWT)** authentication works in the system.
-It covers:
-
-* The **login process** where a token is generated
-* The **authorization flow** for protected requests
-* The **internal structure of a JWT token**
-
----
-
-# 1. JWT Token Flow (Authentication)
-
-This sequence diagram shows how a client logs in and receives a JWT token from the server.
+### Login Flow
 
 ```mermaid
 sequenceDiagram
-    participant User as Client (Browser/Postman)
+    participant User as Client (Browser)
     participant API as Spring Boot Server
     participant Filter as JwtFilter / Security
     participant DB as Supabase (PostgreSQL)
@@ -515,143 +511,55 @@ sequenceDiagram
     User->>API: POST /auth/login (email, password)
     API->>Filter: Intercept Request
     Filter->>DB: Find User by Email
-    DB-->>Filter: Return User Object (Hashed Password)
+    DB-->>Filter: Return User (Hashed Password)
     Filter->>Filter: BCrypt.matches(password, hashedPass)
-    Note right of Filter: If valid → Generate JWT (HS256)
+    Note right of Filter: If valid → Generate JWT HS256
     Filter-->>API: Return Token String
     API-->>User: 200 OK { "token": "eyJhbG..." }
 ```
 
----
-
-# 2. Every Subsequent Request (Authorization)
-
-After authentication, the client must include the **JWT token in the Authorization header** for protected API requests.
+### Every Protected Request
 
 ```mermaid
 flowchart LR
-    A[Client] -- "Header: Bearer eyJ..." --> B[JwtFilter]
+    A[Client] -->|Authorization: Bearer eyJ...| B[JwtFilter]
     B --> C{Token Valid?}
-    C -- "No" --> D[401 Unauthorized]
-    C -- "Yes" --> E[Extract Email]
+    C -->|No| D[401 Unauthorized]
+    C -->|Yes| E[Extract Email]
     E --> F[SecurityContextHolder]
-    F --> G[Controller / Service]
-    G --> H[200 OK Data]
-
-    style D fill:#f96,stroke:#333
-    style H fill:#9f9,stroke:#333
+    F --> G[Controller Processes Request]
+    G --> H[200 OK + Data]
 ```
 
----
-
-# 3. JWT Structure (The 3 Parts)
-
-A JWT token is composed of **three parts** separated by dots:
-
-```
-Header.Payload.Signature
-```
-
-The following diagram explains the structure.
+### JWT Structure
 
 ```mermaid
 flowchart TD
-    Token[JWT Token]
-
-    Token --> Part1[Header]
-    Token --> Part2[Payload]
-    Token --> Part3[Signature]
-
-    subgraph Header_Details
-    Part1 --> H1[Algorithm: HS256]
-    Part1 --> H2[Type: JWT]
-    end
-
-    subgraph Payload_Details
-    Part2 --> P1[sub: user@email.com]
-    Part2 --> P2[iat: Issued At]
-    Part2 --> P3[exp: Expiration]
-    end
-
-    subgraph Signature_Logic
-    Part1 & Part2 --> Encode[Base64URL Encode]
-    Encode --> Hash[HMACSHA256 with Secret Key]
-    Hash --> Part3
-    end
-
-    style Token fill:#d4f,stroke:#333
+    A[JWT Token\neyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...]
+    A --> B[Header\nAlgorithm: HS256\nType: JWT]
+    A --> C[Payload\nsub: user@email.com\niat: Issued At\nexp: 24 hours]
+    A --> D[Signature]
+    B --> E[Base64URL Encode]
+    C --> E
+    E --> F[HMACSHA256 with Secret Key]
+    F --> D
 ```
 
----
-
-# Key Takeaways
-
-### Authentication
-
-* Client sends **email and password**
-* Server validates credentials
-* JWT token is generated and returned
-
-### Authorization
-
-* Client sends the token in the **Authorization header**
-* `JwtFilter` validates the token
-* If valid → request reaches controller
-* If invalid → **401 Unauthorized**
-
-### JWT Components
-
-| Component | Purpose                                        |
-| --------- | ---------------------------------------------- |
-| Header    | Contains algorithm and token type              |
-| Payload   | Contains claims like user email and timestamps |
-| Signature | Ensures the token has not been tampered with   |
-
----
-
-# Notes
-
-* JWT tokens are **stateless**, meaning the server does not store session data.
-* Each request must include the token in the header:
-
-```
-Authorization: Bearer <JWT_TOKEN>
-```
-
-* Token validation is handled by **JwtFilter / Spring Security layer** before reaching controllers.
-
----
-
-### Security Concepts Reference
+### Security Concepts
 
 | Concept | Full Form | What It Means |
 |---|---|---|
-| JWT | JSON Web Token | Signed token. Stateless — server never stores sessions. |
+| ![JWT](https://img.shields.io/badge/JWT-000?logo=jsonwebtokens) | JSON Web Token | Signed token. Stateless — server stores nothing. |
 | HS256 | HMAC SHA-256 | Symmetric signing. Secret key must be 32+ characters. |
-| BCrypt | Blowfish Crypt | One-way password hashing. Never stores plain text passwords. |
-| CSRF | Cross-Site Request Forgery | Disabled for REST APIs since we use stateless JWT. |
-| CORS | Cross-Origin Resource Sharing | Browser policy blocking requests from different origins. |
-| Authentication | — | Verifying WHO the user is (login). |
-| Authorisation | — | Verifying WHAT the user can access (JWT on each request). |
-
-### The Nuclear CORS Fix
-
-Standard CORS config inside Spring Security's filter chain was insufficient — Zoho's outer gateway and Spring's internal chain were conflicting. The solution was a `FilterRegistrationBean` with `Ordered.HIGHEST_PRECEDENCE`:
-
-```java
-@Bean
-public FilterRegistrationBean<CorsFilter> corsFilter() {
-    // This runs BEFORE Spring Security's filter chain
-    bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
-    return bean;
-}
-```
+| BCrypt | Blowfish Crypt | One-way password hashing. Never stores plain text. |
+| CSRF | Cross-Site Request Forgery | Disabled for REST APIs using stateless JWT. |
+| CORS | Cross-Origin Resource Sharing | Browser policy — server must explicitly allow origins. |
 
 ---
 
 ## 9. DevOps & Cloud Deployment
 
-### The Deployment Architecture
+### Deployment Pipeline
 
 ```mermaid
 flowchart TD
@@ -673,15 +581,10 @@ flowchart TD
         E[Zoho AppSail\nJava 17 Runtime\nDynamic Port\n512MB Memory]
     end
 
-    A --> B
-    B --> C
-    C --> D
-    D --> E
+    A --> B --> C --> D --> E
 ```
 
-### Manual CI/CD Pipeline
-
-Every deployment follows this ritual:
+### Manual CI/CD Commands
 
 ```bash
 # Step 1 — Build
@@ -695,13 +598,11 @@ copy target\HelloWorld-0.0.1-SNAPSHOT.jar ..\Deployment\
 cd ..\Deployment
 catalyst deploy
 
-# Step 4 — Monitor
-# Watch Zoho Catalyst Dashboard → Logs → SpringReactToDoByKK
+# Step 4 — Monitor in Zoho Dashboard → Logs → SpringReactToDoByKK
 ```
 
-### Zoho Catalyst Configuration
+### Zoho `app-config.json`
 
-**`app-config.json`:**
 ```json
 {
     "command": "java -jar HelloWorld-0.0.1-SNAPSHOT.jar",
@@ -716,41 +617,26 @@ catalyst deploy
 }
 ```
 
-**`HealthController.java`** — the Zoho "heartbeat" endpoint:
-```java
-@GetMapping("/")
-public String health() {
-    return "Backend is Live!";
-}
-```
-
-Zoho sends a `GET /` request after 30 seconds. If it receives `200 OK`, the app is marked live. If it receives `403 Forbidden` or no response, Zoho kills and restarts the container.
-
 ### The 10-Second Startup Race
 
-Zoho Catalyst allows **10 seconds** for a managed Java app to start. The app was consistently starting in 9.1–9.7 seconds, failing the health check by milliseconds. Solutions applied:
+Zoho kills apps that don't start within 10 seconds:
 
 | Optimization | Time Saved |
 |---|---|
-| `spring.jpa.hibernate.ddl-auto=none` (skip table scanning) | ~3 seconds |
+| `spring.jpa.hibernate.ddl-auto=none` | ~3 seconds |
 | `spring.main.lazy-initialization=true` | ~2 seconds |
 | `spring.data.jpa.repositories.bootstrap-mode=lazy` | ~1 second |
-| Removing Swagger / SpringDoc dependency | ~2 seconds |
-| `HealthController` responding to `GET /` | Health check passes |
+| Removing Swagger dependency | ~2 seconds |
+| `HealthController` at `GET /` | Health check passes ✅ |
 
-**Result:** Startup time reduced from ~14 seconds to ~6 seconds.
+**Result:** Startup reduced from ~14 seconds → ~6 seconds.
 
 ### Java Version Migration
 
-| Phase | Java Version | Reason |
+| Phase | Version | Reason |
 |---|---|---|
-| Local Development | Java 21 | Latest LTS on local machine |
-| Cloud Deployment | Java 17 | Zoho Catalyst Managed Runtime supports Java 17 |
-
-Change in `pom.xml`:
-```xml
-<java.version>17</java.version>
-```
+| Local Dev | ![Java 21](https://img.shields.io/badge/Java-21-ED8B00?logo=openjdk) | Latest LTS locally |
+| Cloud | ![Java 17](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk) | Zoho Catalyst runtime constraint |
 
 ### Vercel Frontend Deployment
 
@@ -758,131 +644,106 @@ Change in `pom.xml`:
 flowchart LR
     A[GitHub Repository\nKARTHIKAKRISHNA123]
     B[Vercel\nAuto-detects Vite]
-    C[Build: npm run build]
-    D[Environment Variable\nVITE_API_BASE_URL=\nhttps://springreacttodobykk...]
-    E[Live on\nvercel.app domain]
+    C[npm run build]
+    D[Env Variable\nVITE_API_BASE_URL set in dashboard]
+    E[Live on vercel.app]
 
-    A -->|Push to main| B
-    B --> C
-    C --> D
-    D --> E
-```
-
-**`axios.js` — Environment-aware base URL:**
-```javascript
-const API_URL = import.meta.env.VITE_API_BASE_URL
-    || 'https://springreacttodobykk-50040626068.development.catalystappsail.in';
+    A -->|Push to main| B --> C --> D --> E
 ```
 
 ---
 
-## 10. The CORS Battle
-
-The journey from "CORS error" to "live and working" involved multiple layers:
+## 10. The CORS Battle — 24 Hours of Debugging
 
 ```mermaid
 flowchart TD
     A[Start: CORS Error\nNo Access-Control-Allow-Origin header]
-
-    A --> B{Where is it\ncoming from?}
-
-    B --> C[Attempt 1\nAdd CorsConfigurationSource\ninside SecurityConfig]
-    C --> D[Still failing\nSpring Security blocks before CORS filter]
-
-    D --> E[Attempt 2\nNuclear FilterRegistrationBean\nOrdered.HIGHEST_PRECEDENCE]
-    E --> F[Java CORS header added\nbut Zoho ALSO adds one]
-
-    F --> G[New Error:\nMultiple CORS header values\nBrowser rejects duplicate]
-
-    G --> H[The Real Fix\nDelete Java CORS bean entirely\nZoho Dashboard handles it]
-
-    H --> I[Zoho Dashboard\nCloud Scale → Authentication\n→ Authorized Domains\nAdd Vercel URL + Enable Toggle]
-
-    I --> J[SUCCESS\nSingle CORS header\nVercel ↔ Zoho handshake works]
+    A --> B[Attempt 1\nCorsConfigurationSource inside SecurityConfig]
+    B --> C[Still failing — Spring blocks before CORS filter]
+    C --> D[Attempt 2\nNuclear FilterRegistrationBean\nOrdered.HIGHEST_PRECEDENCE]
+    D --> E[Java adds header\nbut Zoho ALSO adds one]
+    E --> F[New Error: Multiple CORS header values\nBrowser rejects duplicate]
+    F --> G[The Real Fix\nDelete Java CORS bean entirely]
+    G --> H[Zoho Dashboard\nCloud Scale → Authentication\n→ Authorized Domains\nAdd Vercel URL + Enable Toggle]
+    H --> I[SUCCESS ✅\nSingle CORS header\nVercel ↔ Zoho handshake works]
 ```
 
-### The "Multiple Values" Conflict
-
-Once Zoho's outer gateway was configured to whitelist the Vercel URL, it started adding the `Access-Control-Allow-Origin` header automatically. But the Java `SecurityConfig` was also adding it. The browser received two values and rejected both.
-
-**Fix:** Remove the `FilterRegistrationBean<CorsFilter>` from `SecurityConfig.java` entirely. Let Zoho's gateway be the sole CORS authority.
-
-### What The Error Messages Actually Meant
+### What Each Error Actually Meant
 
 | Error | What Was Really Happening |
 |---|---|
-| `"Email might already be taken"` | False alarm — request never reached database. CORS bouncer at frontend. |
-| `net::ERR_FAILED` | CORS preflight OPTIONS blocked |
-| `No Access-Control-Allow-Origin header` | Backend not responding / CORS not configured |
-| `Multiple CORS header values` | Both Zoho AND Java were adding the header |
-| `Execution failed. Please check startup command or port` | App crashed before Tomcat started — database connection or port issue |
+| `"Email might already be taken"` | False alarm — request never reached database. CORS blocked it. |
+| `net::ERR_FAILED` | CORS preflight OPTIONS was blocked |
+| `No Access-Control-Allow-Origin header` | Backend was offline / not responding |
+| `Multiple CORS header values` | Both Zoho AND Java were adding the same header |
+| `Execution failed. Please check startup command or port` | App crashed before Tomcat started — DB connection / port issue |
 
 ---
 
 ## 11. Learning Journey — Spring Boot from Zero
 
-This project was built from **zero Java web framework knowledge** in Alangulam, Tenkasi, Tamil Nadu, India. Every concept below was learned by building, breaking, and fixing this project.
+Built from zero Java web framework knowledge in Alangulam, Tenkasi, Tamil Nadu.
 
-### Week-by-Week Learning
+### Week-by-Week
 
 | Week | Concept | Key Takeaway |
 |---|---|---|
-| 1 | Spring Boot project generation via `start.spring.io` | Maven generates the full skeleton. `mvnw` runs without global Maven install. |
-| 1 | Apache Tomcat embedded server | Spring Boot bundles its own mini-server. No external install needed. |
-| 1 | REST vs SOAP | Before REST: SOAP (XML-based, complex). REST: URLs + HTTP methods (simple). |
-| 1 | `@RestController`, `@GetMapping` | Controller file controls what each endpoint does. |
-| 2 | 3-Tier Architecture | Controller → Service → Repository → Database. Layers never skip. |
-| 2 | Dependency Injection & IoC | Spring creates and injects objects. `@Autowired` = "give me this Bean". |
-| 2 | `@SpringBootApplication` | Contains `@EnableAutoConfiguration` + `@ComponentScan`. Scans all classes. |
-| 2 | Request Params vs Path Variables vs Request Body | 3 ways to send input: `?key=value`, `/{id}`, JSON body. |
-| 3 | JPA and Hibernate ORM | `@Entity` maps Java → table. `JpaRepository` gives free CRUD. |
-| 3 | H2 In-Memory Database | Zero-install dev database. Spring Boot 4.x broke it — use 3.x. |
-| 3 | H2 Console debugging | Took multiple sessions. Root cause: Boot 4.0.4 bug + stale `.class` files. |
-| 4 | Spring Security Filter Chain | Every request passes through filters before reaching controllers. |
-| 4 | JWT Authentication | 3-part token: Header.Payload.Signature. Stored in localStorage. |
-| 4 | BCrypt Password Hashing | Never store plain text. `BCryptPasswordEncoder.matches()` for comparison. |
-| 4 | CORS configuration | Browser blocks cross-origin requests. Must explicitly allow Vercel URL. |
-| 5 | React + Vite + Tailwind | Both `react()` AND `tailwindcss()` needed in `vite.config.js` plugins. |
-| 5 | Axios interceptors | Auto-attach JWT token to every API request. No manual headers per call. |
-| 5 | TanStack Query | Replaces `useEffect`. `invalidateQueries` refreshes UI after mutations. |
-| 5 | URL mismatch 403 Forbidden | Frontend called `/todos` but backend mapped to `/api/v1/toDo`. Always verify. |
-| 6 | PostgreSQL migration | H2 → PostgreSQL = 3 lines in `application.properties`. Same `@Entity` code. |
-| 6 | Email already exists bug | `ddl-auto=update` never clears data. Fix: `TRUNCATE TABLE user_table`. |
-| 7 | Cloud deployment — Zoho Catalyst | Java 17 required. Dynamic port via `ServerPortCustomizer`. 10-second window. |
-| 7 | Supabase cloud database | Pooler port 6543. `sslmode=require`. `prepareThreshold=0`. Mumbai region. |
-| 7 | The localhost trap | `localhost` in the cloud = the cloud server itself, not your laptop. |
-| 7 | CORS — the final boss | 24 hours. Nuclear filter. Zoho dashboard whitelist. Duplicate header conflict. |
+| 1 | `start.spring.io` project setup | Maven generates the skeleton. `mvnw` runs without global Maven. |
+| 1 | Embedded Tomcat | Spring Boot bundles its own server. No external install. |
+| 1 | REST vs SOAP | SOAP = complex XML. REST = simple URLs + HTTP methods. |
+| 1 | `@RestController`, `@GetMapping` | Controller maps URLs to Java methods. |
+| 2 | 3-Tier Architecture | Controller → Service → Repository → DB. Never skip layers. |
+| 2 | Dependency Injection & IoC | `@Autowired` = Spring injects. No manual `new`. |
+| 2 | `@SpringBootApplication` | = `@EnableAutoConfiguration` + `@ComponentScan`. |
+| 2 | Request Params / Path Variables / Body | 3 ways to send input to an API. |
+| 3 | JPA + Hibernate ORM | `@Entity` → table. `JpaRepository` → free CRUD. |
+| 3 | H2 In-Memory Database | Zero-install dev DB. Spring Boot 4.x broke it — use 3.x. |
+| 3 | H2 Console debugging | Boot 4.0.4 bug + stale `.class` files = 404. |
+| 4 | Spring Security Filter Chain | Every request goes through filters before controllers. |
+| 4 | JWT Authentication | Header.Payload.Signature — stateless auth. |
+| 4 | BCrypt | Never store plain text passwords. |
+| 4 | CORS | Browser blocks cross-origin. Server must allow explicitly. |
+| 5 | React + Vite + Tailwind | Both `react()` AND `tailwindcss()` needed in plugins. |
+| 5 | Axios interceptors | Auto-attach JWT. No manual headers per call. |
+| 5 | TanStack Query | `invalidateQueries` refreshes UI after mutations. |
+| 5 | URL mismatch 403 | Frontend `/todos` ≠ backend `/api/v1/toDo`. Always verify. |
+| 6 | PostgreSQL migration | H2 → Postgres = 3 lines in `application.properties`. |
+| 6 | Email exists bug | `ddl-auto=update` never clears data. Fix: `TRUNCATE TABLE`. |
+| 7 | Zoho Catalyst deploy | Java 17. Dynamic port via `ServerPortCustomizer`. |
+| 7 | Supabase cloud DB | Pooler 6543. `sslmode=require`. `prepareThreshold=0`. Mumbai. |
+| 7 | The localhost trap | `localhost` in cloud = cloud server, not your laptop. |
+| 7 | CORS — the final boss | 24 hours. Nuclear filter. Zoho dashboard. Duplicate header. |
 
 ### The Biggest Lessons
 
-1. **Spring Boot 4.x is cutting-edge but unstable** — Use 3.4.x for reliable H2 and production-grade behavior.
-2. **Always clean after version changes** — Old `.class` files in `target/` override everything.
-3. **The localhost trap** — `localhost` in cloud config always means the cloud server, not your machine.
-4. **CORS is a browser policy, not a server error** — The browser blocks it. The server must explicitly allow the origin.
-5. **Zoho has two CORS layers** — Java code + Zoho dashboard. Having both creates duplicate header conflicts.
-6. **`ddl-auto=none` is fastest in production** — Tables already exist. Don't scan on every boot.
-7. **JWT is stateless** — The token IS the authentication. The server stores nothing.
+1. **![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.x%20unstable-FF0000?logo=springboot) Use 3.4.x** — Boot 4.x broke H2 console registration.
+2. **Always `Build → Clean Project` after version changes** — Stale `.class` files override everything.
+3. **The localhost trap** — `localhost` in cloud config = the cloud server itself.
+4. **CORS is a browser policy** — Not a server error. Browser enforces it.
+5. **Zoho has two CORS layers** — Java + Dashboard. Both active = duplicate header = blocked.
+6. **`ddl-auto=none` in production** — Tables exist. Don't scan on every boot.
+7. **JWT is stateless** — The token IS the authentication. Server stores nothing.
 
 ---
 
 ## 12. Known Issues & Fixes
 
-| Issue | Root Cause | Fix Applied |
+| Issue | Root Cause | Fix |
 |---|---|---|
-| Port 8080 already in use | Old Spring Boot instance still running | `taskkill /PID <id> /F` or `server.port=8081` |
-| H2 console 404 | Spring Boot 4.0.4 broke H2 registration | Downgrade to 3.4.4 + `Build → Clean Project` |
+| Port 8080 in use | Old Spring Boot instance running | `taskkill /PID <id> /F` or `server.port=8081` |
+| H2 console 404 | Spring Boot 4.0.4 bug | Downgrade to 3.4.4 + Clean Project |
 | Spring Security login page | `spring-boot-starter-security` added twice | Remove duplicate from `pom.xml` |
-| `annotation values must be of the form name=value` | `@ComponentScan` wrong syntax for multiple packages | Use `basePackages = {}` or remove `@ComponentScan` entirely |
-| `SecurityConfig.java` not found | File in wrong folder (`src/main/java/` root) | Move to `com.kk.HelloWorld.config` package |
-| `cannot find symbol AntPathRequestMatcher` | Removed in Spring Security 6.x | Deleted premature SecurityConfig |
-| Email Already Exists for every registration | Stale PostgreSQL data + `ddl-auto=update` | `TRUNCATE TABLE user_table` in pgAdmin |
-| `GET /todos 403 Forbidden` | Frontend URL `/todos` vs backend `/api/v1/toDo` | Fixed URLs in `todoService.js` |
-| `npm run dev` blank page | `@vitejs/plugin-react` not installed, `id="app"` not `"root"` | `npm install -D @vitejs/plugin-react` + fix `index.html` |
-| Tailwind styles not applying | `tailwindcss()` missing from `vite.config.js` plugins | Add to `plugins: [react(), tailwindcss()]` |
-| `ConflictingBeanDefinitionException` | Two `ServerPortCustomizer` in different packages | Delete the one in root package, keep `config/` version |
-| `Execution failed. Please check startup command or port` | App not starting within 10s — Supabase connection timeout | `ddl-auto=none` + lazy init + correct Mumbai region URL |
-| CORS Multiple Values Error | Both Zoho dashboard AND Java both adding CORS header | Remove Java CORS bean, let Zoho dashboard handle it |
-| Corrupted JDBC URL | Double `jdbc:jdbc:` prefix + credentials embedded in URL | Replace entire `application.properties` with clean version |
+| `annotation values must be of the form name=value` | `@ComponentScan` wrong multi-package syntax | Use `basePackages = {}` or remove entirely |
+| `SecurityConfig.java` not found | File in `src/main/java/` root | Move to `com.kk.HelloWorld.config` package |
+| `cannot find symbol AntPathRequestMatcher` | Removed in Spring Security 6.x | Delete premature SecurityConfig |
+| Email Already Exists for all registrations | Stale PostgreSQL data | `TRUNCATE TABLE user_table` in pgAdmin |
+| `GET /todos 403 Forbidden` | Frontend `/todos` vs backend `/api/v1/toDo` | Fix URLs in `todoService.js` |
+| `npm run dev` blank page | `@vitejs/plugin-react` missing, `id="app"` not `"root"` | `npm install -D @vitejs/plugin-react` + fix `index.html` |
+| Tailwind styles not applying | `tailwindcss()` missing from `vite.config.js` | Add to `plugins: [react(), tailwindcss()]` |
+| `ConflictingBeanDefinitionException` | Two `ServerPortCustomizer` in different packages | Delete root package version |
+| `Execution failed. Please check startup command or port` | App not starting in 10s | `ddl-auto=none` + lazy init + correct Mumbai URL |
+| CORS Multiple Values Error | Both Zoho AND Java adding CORS header | Remove Java CORS bean — let Zoho handle it |
+| Corrupted JDBC URL | Double `jdbc:jdbc:` prefix | Replace entire `application.properties` |
 
 ---
 
@@ -890,35 +751,29 @@ This project was built from **zero Java web framework knowledge** in Alangulam, 
 
 ### Prerequisites
 
-| Tool | Version | Download |
-|---|---|---|
-| Java JDK | 17 (for Zoho compatibility) | https://adoptium.net |
-| IntelliJ IDEA | Community Edition | https://jetbrains.com/idea |
-| Node.js | 18+ | https://nodejs.org |
-| PostgreSQL | 15+ (optional for local) | https://postgresql.org |
-| Git | Latest | https://git-scm.com |
+<p align="left">
+  <img src="https://img.shields.io/badge/Java%20JDK-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/IntelliJ%20IDEA-Community-000000?style=for-the-badge&logo=intellijidea&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-15+-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-Latest-F05032?style=for-the-badge&logo=git&logoColor=white" />
+</p>
 
 ### Backend Setup
 
 ```bash
-# Clone repository
 git clone https://github.com/KARTHIKAKRISHNA123/Spring-React-ToDo-NM.git
 cd Spring-React-ToDo-NM/HelloWorld
 
-# Open in IntelliJ and let Maven sync
-
-# For local development with H2 (uncomment in application.properties):
+# For H2 development — uncomment in application.properties:
 # spring.datasource.url=jdbc:h2:mem:tododb;DB_CLOSE_DELAY=-1
 # spring.datasource.username=sa
 # spring.datasource.password=
 # spring.h2.console.enabled=true
 
-# Run
 ./mvnw spring-boot:run
-
-# Verify
-# http://localhost:8081/
-# http://localhost:8081/hello
+# → http://localhost:8081
+# → http://localhost:8081/h2-console (dev only)
 ```
 
 ### Frontend Setup
@@ -927,8 +782,8 @@ cd Spring-React-ToDo-NM/HelloWorld
 cd react-todo-frontend
 npm install
 
-# For local development, create .env:
-# VITE_API_BASE_URL=http://localhost:8081
+# Create .env for local dev:
+echo "VITE_API_BASE_URL=http://localhost:8081" > .env
 
 npm run dev
 # → http://localhost:5173
@@ -936,10 +791,10 @@ npm run dev
 
 ### Environment Variables
 
-| Variable | Where | Value |
+| Variable | Location | Value |
 |---|---|---|
-| `VITE_API_BASE_URL` | Vercel Dashboard / `.env` | Zoho AppSail URL |
-| `X_ZOHO_CATALYST_LISTEN_PORT` | Zoho (auto-set) | Dynamic port assigned by Catalyst |
+| `VITE_API_BASE_URL` | Vercel Dashboard / `.env` | Zoho AppSail backend URL |
+| `X_ZOHO_CATALYST_LISTEN_PORT` | Zoho (auto-set) | Dynamic port from Catalyst |
 
 ---
 
@@ -953,67 +808,46 @@ flowchart LR
         A[Browser\nVercel App]
     end
 
-    subgraph Zoho Catalyst
-        B[Outer Gateway\nCORS Whitelist\nAuthorized Domains]
-        C[AppSail Container\nSpring Boot 3.4.4\nJava 17\n512MB RAM]
+    subgraph ZohoCatalyst [Zoho Catalyst]
+        B[Outer Gateway\nCORS Whitelist]
+        C[AppSail Container\nSpring Boot 3.4.4\nJava 17 — 512MB]
         D[JwtFilter\nServerPortCustomizer\nHealthController]
     end
 
-    subgraph Supabase
-        E[Transaction Pooler\nPort 6543\nSSL Required]
-        F[(PostgreSQL\nMumbai Region\nap-south-1)]
+    subgraph SupabaseCloud [Supabase]
+        E[Transaction Pooler\nPort 6543 — SSL]
+        F[(PostgreSQL\nMumbai ap-south-1)]
     end
 
-    A -->|HTTPS + JWT| B
-    B --> C
-    C --> D
-    D -->|JDBC + SSL| E
-    E --> F
-    F --> E
-    E --> D
-    D --> C
-    C --> B
-    B -->|JSON Response| A
+    A -->|HTTPS + JWT| B --> C --> D
+    D -->|JDBC + SSL| E --> F
+    F --> E --> D --> C --> B -->|JSON| A
 ```
 
-### Java → Spring Framework → Spring Boot Hierarchy
+### Java → Spring → Spring Boot
 
 ```mermaid
 flowchart TD
-    A[Java Language\nBase Programming Language]
-    B[Spring Framework\nDependency Injection\nIoC Container\nAOP]
-    C[Spring Boot\nAuto-Configuration\nEmbedded Tomcat\nStarter Dependencies\nOpinionated Defaults]
-
-    A --> B
-    B --> C
-```
-
-### Client-Server Communication
-
-```mermaid
-flowchart LR
-    A[User / Client]
-    B[Server / API]
-    A -->|HTTP Request\nGET POST PUT DELETE| B
-    B -->|HTTP Response\nJSON + Status Code| A
+    A[Java Language\nBase Programming]
+    B[Spring Framework\nDI + IoC + AOP]
+    C[Spring Boot\nAuto-Config\nEmbedded Tomcat\nStarter Deps]
+    A --> B --> C
 ```
 
 ### Spring Security Filter Chain
 
 ```mermaid
 flowchart LR
-    A[User / Client]
-    B[Spring Security\nFilter Chain]
-    C[CORS Filter\nHighest Precedence]
-    D[JwtFilter\nOncePerRequestFilter]
-    E[API / Backend Server\nController Layer]
+    A[Client Request]
+    B[CORS Filter\nHighest Precedence]
+    C[JwtFilter\nOncePerRequestFilter]
+    D{Token Valid?}
+    E[Controller Layer]
+    F[401 Unauthorized]
 
-    A -->|HTTP Request| C
-    C --> D
-    D -->|Token Valid?| B
-    B -->|Authorized| E
-    E -->|Process + Respond| B
-    B -->|HTTP Response| A
+    A --> B --> C --> D
+    D -->|Yes| E
+    D -->|No| F
 ```
 
 ### Port and Network Routing
@@ -1021,49 +855,53 @@ flowchart LR
 ```mermaid
 flowchart LR
     A[Client Device]
-    B[IP Address\nZoho Server]
-    C[Port Number\nAssigned by X_ZOHO_CATALYST_LISTEN_PORT]
-    D[Application Server\nSpring Boot JAR]
+    B[Zoho Server\nIP Address]
+    C[Dynamic Port\nX_ZOHO_CATALYST_LISTEN_PORT]
+    D[Spring Boot JAR\nHealthController responds GET /]
 
-    A -->|Network Request| B
-    B --> C
-    C --> D
+    A -->|Network Request| B --> C --> D
 ```
 
 ---
 
-## Project Status
+## 15. Project Status
 
 | Feature | Status |
 |---|---|
-| Spring Boot backend | ✅ Complete |
-| JWT authentication (register + login) | ✅ Complete |
-| Full CRUD todo operations | ✅ Complete |
-| Pagination support | ✅ Complete |
-| H2 in-memory database (dev) | ✅ Complete |
-| PostgreSQL Supabase (production) | ✅ Complete |
-| React frontend — Todoist dark mode | ✅ Complete |
-| Google Labs 3D bento grid UI | ✅ Complete |
-| Framer Motion animations | ✅ Complete |
-| Axios JWT interceptor | ✅ Complete |
-| TanStack Query integration | ✅ Complete |
-| react-hot-toast notifications | ✅ Complete |
-| Backend deployed — Zoho Catalyst | ✅ Live |
-| Frontend deployed — Vercel | ✅ Live |
-| Database deployed — Supabase | ✅ Live |
-| CORS resolved end-to-end | ✅ Resolved |
-| Edit inline CRUD | ✅ Complete |
+| ![Spring](https://img.shields.io/badge/Spring%20Boot%20Backend-Complete-6DB33F?logo=springboot) | ✅ |
+| ![JWT](https://img.shields.io/badge/JWT%20Auth%20Register%20%2B%20Login-Complete-000000?logo=jsonwebtokens) | ✅ |
+| ![CRUD](https://img.shields.io/badge/Full%20CRUD%20Todo%20Operations-Complete-blue) | ✅ |
+| ![React](https://img.shields.io/badge/React%20Frontend%20Dark%20Mode-Complete-61DAFB?logo=react) | ✅ |
+| ![Framer](https://img.shields.io/badge/Google%20Labs%203D%20Bento%20Grid-Complete-0055FF?logo=framer) | ✅ |
+| ![Axios](https://img.shields.io/badge/Axios%20JWT%20Interceptor-Complete-5A29E4?logo=axios) | ✅ |
+| ![TanStack](https://img.shields.io/badge/TanStack%20Query-Complete-FF4154?logo=reactquery) | ✅ |
+| ![Zoho](https://img.shields.io/badge/Backend%20Deployed%20Zoho%20Catalyst-Live-E42527?logo=zoho) | ✅ |
+| ![Vercel](https://img.shields.io/badge/Frontend%20Deployed%20Vercel-Live-000000?logo=vercel) | ✅ |
+| ![Supabase](https://img.shields.io/badge/Database%20Supabase%20Mumbai-Live-3ECF8E?logo=supabase) | ✅ |
+| ![CORS](https://img.shields.io/badge/CORS%20Resolved%20End--to--End-Resolved-success) | ✅ |
+| Protected Routes | 🔲 Pending |
 
 ---
 
 ## License
 
-MIT License — See `LICENSE` for details.
+![MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ---
 
 ## Author
 
-**Karthika Krishna M**
-GitHub: [@KARTHIKAKRISHNA123](https://github.com/KARTHIKAKRISHNA123)
+<p align="left">
+  <a href="https://github.com/KARTHIKAKRISHNA123">
+    <img src="https://img.shields.io/badge/GitHub-KARTHIKAKRISHNA123-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://www.linkedin.com/in/karthika-krishna-m">
+    <img src="https://img.shields.io/badge/LinkedIn-Karthika%20Krishna%20M-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="mailto:karthikakrishna201005@gmail.com">
+    <img src="https://img.shields.io/badge/Email-karthikakrishna201005%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+</p>
+
+**Karthika Krishna M** — B.E. Computer Science & Engineering, Anna University Regional Campus Tirunelveli (CGPA: 8.87) | IBM Hackathon 2026 — 3rd Prize Winner |
 
