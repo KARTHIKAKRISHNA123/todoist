@@ -879,7 +879,7 @@ flowchart LR
 | ![Vercel](https://img.shields.io/badge/Frontend%20Deployed%20Vercel-Live-000000?logo=vercel) | ✅ |
 | ![Supabase](https://img.shields.io/badge/Database%20Supabase%20Mumbai-Live-3ECF8E?logo=supabase) | ✅ |
 | ![CORS](https://img.shields.io/badge/CORS%20Resolved%20End--to--End-Resolved-success) | ✅ |
-| Protected Routes | 🔲 Pending |
+
 
 ---
 
@@ -903,5 +903,5 @@ flowchart LR
   </a>
 </p>
 
-**Karthika Krishna M** — B.E. Computer Science & Engineering, Anna University Regional Campus Tirunelveli (CGPA: 8.87) | IBM Hackathon 2026 — 3rd Prize Winner |
+
 
