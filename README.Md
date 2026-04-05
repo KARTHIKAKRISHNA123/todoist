@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=DB4C3F&center=true&vCenter=true&width=700&lines=Spring+Boot+%2B+React+Todo+App;Full-Stack+%7C+JWT+%7C+Cloud+Deployed;From+Tenkasi+to+Production+%F0%9F%9A%80" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=DB4C3F&center=true&vCenter=true&width=700&lines=Spring+Boot+%2B+React+Todo+App;Full-Stack+%7C+JWT+%7C+Cloud+Deployed+%F0%9F%9A%80" alt="Typing SVG" />
 </p>
 
 <p align="center">
